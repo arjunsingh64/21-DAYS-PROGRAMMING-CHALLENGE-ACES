@@ -1,0 +1,60 @@
+1) IFNULL function in SQL :- It returns the specified value if the expresseion is NULL otherwise return the expression.
+
+-> The IFNULL() function returns a specified value if the expression is NULL.
+
+-> If the expression is NOT NULL, this function returns the expression.
+
+SELECT IFNULL(NULL,"ARJUN");
+
+
+2)COALESCE:-
+
+The COALESCE() function returns the first non-null value in a list.
+
+SELECT COALESCE(NULL, NULL, NULL, 'arjun.com', NULL, 'Example.com'); 
+
+
+3) NVL(expr1, expr2) : In SQL, NVL() converts a null value to an actual value. Data types that can be used are date, character and number. Data type must match with each other i.e. expr1 and expr2 must of same data type.
+Syntax –
+
+NVL (expr1, expr2)
+
+expr1 is the source value or expression that may contain a null.
+expr2 is the target value for converting the null. 
+
+
+
+4)NVL2(expr1, expr2, expr3) : The NVL2 function examines the first expression. If the first expression is not null, then the NVL2 function returns the second expression. If the first expression is null, then the third expression is returned i.e. If expr1 is not null, NVL2 returns expr2. If expr1 is null, NVL2 returns expr3. The argument expr1 can have any data type.
+
+Syntax –
+
+NVL2 (expr1, expr2, expr3)
+
+expr1 is the source value or expression that may contain null
+expr2 is the value returned if expr1 is not null
+expr3 is the value returned if expr1 is null
+
+
+5)SQL CASE Statement
+
+The CASE statement goes through conditions and returns a value when the first condition is met (like an IF-THEN-ELSE statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
+
+If there is no ELSE part and no conditions are true, it returns NULL.
+
+CASE
+    WHEN condition1 THEN result1
+    WHEN condition2 THEN result2
+    WHEN conditionN THEN resultN
+    ELSE result
+END; 
+
+6)DECODE statement
+
+
+SELECT supplier_name,
+DECODE(supplier_id, 10000, 'IBM',
+                    10001, 'Microsoft',
+                    10002, 'Hewlett Packard',
+                    'Gateway') result
+FROM suppliers;
+
